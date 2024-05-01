@@ -3,6 +3,7 @@ import csv
 student_fields = ['name', 'account type', 'subject']
 teacher_fields = ['name', 'account type', 'subject']
 student_database = 'students.csv'
+subject_database = 'subjects.csv'
 teacher_database = 'teachers.csv'
 
 def main():
@@ -38,10 +39,9 @@ def director_menu():
     while True:
         choice = input("Enter your choice: ")
         if choice == '1':
-            #view_subjects()
-            print("option 1")
+            view_subjects()
         elif choice == '2':
-            view_students()
+            view_students_num()
         elif choice == '3':
             view_teachers()
         elif choice == '4':
@@ -75,8 +75,9 @@ def teacher_menu():
         if choice == '1':
             #view_subjects()
             print("option 1")
-        # elif choice == '2':
-        #     view_grades()
+        elif choice == '2':
+           # view_grades()
+           print("option 2")
         elif choice == '3':
             view_students_num()
         elif choice == '4':
@@ -162,6 +163,17 @@ def view_students():
             print("\n")
 
     input("Press any key to continue")
+    
+def view_subjects():
+    global subject_database
+    print("--- Subjects ---")
+    with open(subject_database, "r", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            for item in row:
+                print(item)
+
+    input("Press any key to continue")    
     
 def view_students_num():
     global student_fields
