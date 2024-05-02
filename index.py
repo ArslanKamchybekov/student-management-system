@@ -26,7 +26,7 @@ def director_menu():
     print("--------------")
     print("Director Menu")
     print("--------------")
-    print("1. View all subjects") #tbd
+    print("1. View all subjects")
     print("2. View number of students by subject") #tbd
     print("3. View all teachers") #done
     print("4. Add new teacher") #done
