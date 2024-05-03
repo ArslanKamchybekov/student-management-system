@@ -19,7 +19,7 @@ def main():
     elif account_type == "director" and keyword == "user-director":
         director_menu()
     else:
-        print("Sorry, but we did not find this type of account, please try again.")
+        print("Sorry, but we did not find this type of account.")
 
 #Director Menu
 def director_menu():
